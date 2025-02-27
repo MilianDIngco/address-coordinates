@@ -105,12 +105,15 @@ function setHeaderOrder(headers) {
         // Create number input
         const numberInput = document.createElement('input');
         numberInput.type = "number";
-        numberInput.placeholder = `Order ${count++}`;
+        numberInput.placeholder = `Order ${count}`;
         numberInput.required = true;
+        numberInput.defaultValue = -1;
+        numberInput.name = header;
 
         orderHeader.appendChild(numberInput);
         tableRow.appendChild(orderHeader);
 
         headerTable.appendChild(tableRow);
+        count++;
     })
 }

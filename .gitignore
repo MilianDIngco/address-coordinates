@@ -41,6 +41,7 @@ coverage/
 *.bak
 *.swp
 *.swo
+.uploads/
 
 # Git-specific files
 .git/
@@ -53,3 +54,4 @@ Dockerfile
 # Cloud and deployment files (if using Google Cloud or other platforms)
 .gcloudignore
 .firebase/
+

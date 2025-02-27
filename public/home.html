@@ -14,7 +14,7 @@
 
             <p>Enter which sheet of the excel workbook you want to check 🐜</p>
             <label for="sheetOptions">Sheet Option</label>
-            <select id="sheetOptions" required>
+            <select id="sheetOptions" name="sheetName" required>
                 <option value="" disabled selected>Select a Sheet</option>
                 <option value="Sheet1" disabled>Sheet1</option>
                 <option value="Sheet2" disabled>Sheet2</option>
@@ -22,28 +22,33 @@
             </select>
 
             <p>Enter the order that you want the address to be concatenated.</p>
+            <p>If a column shouldn't be included in the address, leave the value as -1</p>
+            <p>If rows should be kept in a specific order according to some key column, set the value as -2</p>
+            <pre>
+-1: Ignore this column
+>= 0: Sort by this column
+for best results, DO NOT HAVE REPEATING NUMBERS
+            </pre>
             <p>EX: If you have column headers -> Town: 2 Street: 1 State: 3<br>will result in values from the column being ordered as "Street Town State"</p>
             <p>lmk if that made sense 📞 </p>
         
             <table id="headerTable">
                 <tr>
                     <th>Column 1</th>
-                    <th><input type="number" placeholder="Order 1" disabled required></th>
+                    <th><input type="number" name="Order 1" placeholder="Order 1" disabled required></th>
                 </tr>
                 <tr>
                     <th>Column 2</th>
-                    <th><input type="number" placeholder="Order 2" disabled required></th>
+                    <th><input type="number" name="Order 2" placeholder="Order 2" disabled required></th>
                 </tr>
                 <tr>
                     <th>Column 3</th>
-                    <th><input type="number" placeholder="Order 3" disabled required></th>
+                    <th><input type="number" name="Order 3" placeholder="Order 3" disabled required></th>
                 </tr>    
             </table>
         
             <input type="submit" value="Submit">
         </form>
-
-        <h1>output will be here ⬇️</h1>
 
         <!-- Include xlsx -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
