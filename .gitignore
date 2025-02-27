@@ -1,6 +1,55 @@
-thingsidid.txt
-package.json
-package-lock.json
+# Node.js dependencies
 node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
 
+# Environment variables
 .env
+.env.local
+.env.*.local
+
+# Logs and debugging
+*.log
+logs/
+debug.log
+*.pid
+*.seed
+*.seedpeers
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Editor-specific files
+.idea/
+.vscode/
+*.swp
+
+# Build and cache files
+dist/
+out/
+build/
+coverage/
+.cache/
+.npm/
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# Git-specific files
+.git/
+.gitignore
+
+# Docker files (if using Docker)
+Dockerfile
+*.tar.gz
+
+# Cloud and deployment files (if using Google Cloud or other platforms)
+.gcloudignore
+.firebase/

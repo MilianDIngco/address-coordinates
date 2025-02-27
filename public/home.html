@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Address Locator</title>
+
+        <link rel="stylesheet" href="./styles.css" />
+    </head>
+    <body>
+        <h1> heres your coords kate. 🙂</h1>
+        <p>Upload your spreadsheet here</p>
+        <form id="uploadForm" action="/upload" method="POST" enctype="multipart/form-data"> 
+            <input type="file" id="excelFile" name="spreadsheet" required accept=".xls,.xlsx"> 
+
+            <p>Enter which sheet of the excel workbook you want to check 🐜</p>
+            <label for="sheetOptions">Sheet Option</label>
+            <select id="sheetOptions" required>
+                <option value="" disabled selected>Select a Sheet</option>
+                <option value="Sheet1" disabled>Sheet1</option>
+                <option value="Sheet2" disabled>Sheet2</option>
+                <option value="Sheet3" disabled>Sheet3</option>
+            </select>
+
+            <p>Enter the order that you want the address to be concatenated.</p>
+            <p>EX: If you have column headers -> Town: 2 Street: 1 State: 3<br>will result in values from the column being ordered as "Street Town State"</p>
+            <p>lmk if that made sense 📞 </p>
+        
+            <table id="headerTable">
+                <tr>
+                    <th>Column 1</th>
+                    <th><input type="number" placeholder="Order 1" disabled required></th>
+                </tr>
+                <tr>
+                    <th>Column 2</th>
+                    <th><input type="number" placeholder="Order 2" disabled required></th>
+                </tr>
+                <tr>
+                    <th>Column 3</th>
+                    <th><input type="number" placeholder="Order 3" disabled required></th>
+                </tr>    
+            </table>
+        
+            <input type="submit" value="Submit">
+        </form>
+
+        <h1>output will be here ⬇️</h1>
+
+        <!-- Include xlsx -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+        <script src="./columnOrder.js"></script>
+    </body>
+</html>

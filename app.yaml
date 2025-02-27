@@ -1,0 +1,9 @@
+runtime: nodejs20  # Change this to your desired Node.js version (e.g., nodejs18, nodejs20)
+service: default
+handlers:
+  - url: /.*
+    script: auto
+
+service: geocode-service
+env_variables:
+  GOOGLE_MAPS_API_KEY: "AIzaSyCThKkc-bsgdH8qAXVE9aAsQaGRl9yaQ6E"

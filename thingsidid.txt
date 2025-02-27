@@ -1,0 +1,23 @@
+2/25 10:09 PM
+enabled maps APIs
+ - places
+ - geocoding
+ - maps.js
+installed axios to handle HTTP requests
+installed dotenv to handle sensitive env variables
+
+2/26 1:27 AM
+installed multer for handling file uploads in Node.js
+    - npm install --save multer
+
+HTML to accept files
+<form action="/profile" method="post" enctype="multipart/form-data"> // enctype encodes binary files instead of sending as plain text
+    <input type="file" name="avatar" /> // uploaded file is assigned the name avatar as a key
+</form>
+
+use this to set where uploads go
+const upload = multer({ dest: 'uploads/' })
+
+
+
+installed xlsx for Excel file processing
