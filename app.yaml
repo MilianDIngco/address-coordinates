@@ -1,5 +1,4 @@
-runtime: nodejs20  # Change this to your desired Node.js version (e.g., nodejs18, nodejs20)
-service: default
+runtime: nodejs22  # Change this to your desired Node.js version (e.g., nodejs18, nodejs20)
 handlers:
   - url: /.*
     script: auto
@@ -7,3 +6,9 @@ handlers:
 service: geocode-service
 env_variables:
   GOOGLE_MAPS_API_KEY: "AIzaSyCThKkc-bsgdH8qAXVE9aAsQaGRl9yaQ6E"
+
+automatic_scaling:
+  min_instances: 1
+  max_instances: 2
+  target_cpu_utilization: 0.65
+
